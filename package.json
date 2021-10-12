@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-starter",
+  "version": "1.0.0",
+  "description": "A Node.js + Typescript starter template",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexcaballerosa/nodejs-starter.git"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "express"
+  ],
+  "author": "Alex Caballero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexcaballerosa/nodejs-starter/issues"
+  },
+  "homepage": "https://github.com/alexcaballerosa/nodejs-starter#readme"
+}
