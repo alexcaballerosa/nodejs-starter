@@ -16,7 +16,9 @@
     "watch:inspect": "nodemon --inspect dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "lint": "tsc --noEmit && eslint . --ext js,ts",
+    "lint:fix": "eslint . --ext js,ts --fix"
   },
   "repository": {
     "type": "git",
@@ -35,7 +37,11 @@
   "homepage": "https://github.com/alexcaballerosa/nodejs-starter#readme",
   "devDependencies": {
     "@types/node": "^16.10.3",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
     "concurrently": "^6.3.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.3.0",
     "nodemon": "^2.0.13",
     "prettier": "^2.4.1",
     "ts-node": "^10.3.0",
