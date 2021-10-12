@@ -4,10 +4,16 @@
   "description": "A Node.js + Typescript starter template",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts",
-    "start": "node dist/index.js",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"blue.bold,green.bold\" npm:watch:ts npm:watch:node",
+    "dev:debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"blue.bold,green.bold\" npm:watch:ts npm:watch:inspect",
+    "debug": "npm run build && npm run dev:debug",
     "build": "tsc --build",
     "build:clean": "tsc --build --clean",
+    "start": "node dist/index.js",
+    "start:ts": "ts-node src/index.ts",
+    "watch:ts": "tsc --watch",
+    "watch:node": "nodemon dist/index.js",
+    "watch:inspect": "nodemon --inspect dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +32,9 @@
   },
   "homepage": "https://github.com/alexcaballerosa/nodejs-starter#readme",
   "devDependencies": {
+    "@types/node": "^16.10.3",
+    "concurrently": "^6.3.0",
+    "nodemon": "^2.0.13",
     "ts-node": "^10.3.0",
     "typescript": "^4.4.3"
   }
